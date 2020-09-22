@@ -1,0 +1,24 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /
+spring:
+  resources: # 指定静态资源的路径
+    static-locations: classpath:/static/,classpath:/views/
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /*
+#  mvc:
+#    view:
+#      prefix: /views/
+#      suffix: .html
+
+  thymeleaf:
+    prefix: classpath:/views/
+    suffix: .html
+    encoding: utf-8
+    mode: HTML5
+    cache: false
+
